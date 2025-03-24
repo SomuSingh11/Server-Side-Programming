@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Delights Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Evening Mode</em>
+    </div>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Savory Delights</h1>
+            <p>Experience culinary excellence in every bite</p>
+            <button class="cta-button">Make a Reservation</button>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section" id="about">
+        <div class="parallax-content">
+            <h2>Our Culinary Story</h2>
+            <p>Founded in 2010, our restaurant brings together traditional recipes and modern cooking techniques to create unforgettable dining experiences.</p>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content" id="story">
+        <div class="content-box">
+            <h2>Our Philosophy</h2>
+            <p>At Savory Delights, we believe in using only the freshest, locally-sourced ingredients. Our chefs work closely with local farmers to ensure that every dish tells a story of quality and passion.</p>
+        </div>
+        <div class="content-box">
+            <h2>Private Events</h2>
+            <p>From intimate gatherings to grand celebrations, our restaurant offers the perfect setting for your special occasions. Contact us to learn about our custom catering options and private dining rooms.</p>
+        </div>
+    </section>
+
+    <!-- Card Section - Menu -->
+    <section class="card-section" id="menu">
+        <h2 class="section-title">Our Signature Dishes</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1664478291780-0c67f5fb15e6?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                <div class="card-content">
+                    <h3>Truffle Pasta</h3>
+                    <p>Handmade fettuccine with black truffle cream sauce and aged parmesan.</p>
+                    <span class="price-tag">$24.95</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1546964124-0cce460f38ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                <div class="card-content">
+                    <h3>Prime Ribeye</h3>
+                    <p>28-day aged prime ribeye with roasted garlic butter and seasonal vegetables.</p>
+                    <span class="price-tag">$38.95</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1624695172952-ea2b4113af7f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                <div class="card-content">
+                    <h3>Chocolate Soufflé</h3>
+                    <p>Warm chocolate soufflé with vanilla bean ice cream and raspberry coulis.</p>
+                    <span class="price-tag">$12.95</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section for Reservations -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Make a Reservation</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Hours & Location</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Culinary Street, Gourmet City</p>
+                <p><i class="fas fa-clock"></i> Mon-Thu: 11am-10pm | Fri-Sat: 11am-11pm | Sun: 10am-9pm</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> reservations@savorydelights.com</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Date & Time" required>
+                    <input type="number" placeholder="Number of Guests" required min="1" max="20">
+                    <textarea placeholder="Special Requests" required></textarea>
+                    <button type="submit" class="submit-button">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Savory Delights</h3>
+                <p>Culinary excellence since 2010</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Savory Delights Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for dark mode toggle
+        const toggleSwitch = document.querySelector('#checkbox');
+        toggleSwitch.addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
