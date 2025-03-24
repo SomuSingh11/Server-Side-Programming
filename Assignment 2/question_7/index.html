@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+        h1 {
+            color: #ff0000;
+            margin: 0;
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .form-label {
+            width: 200px;
+            font-weight: bold;
+        }
+        .form-input {
+            flex: 1;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        textarea {
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Employee Icon">
+            <h1>Employee Registration Form</h1>
+        </div>
+        
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-label"></div>
+                <div class="form-input radio-group">
+                    <label><input type="radio" name="title" value="Mr" checked> Mr.</label>
+                    <label><input type="radio" name="title" value="Mrs"> Mrs.</label>
+                    <label><input type="radio" name="title" value="Ms"> Ms.</label>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">First Name</div>
+                <div class="form-input">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Last Name</div>
+                <div class="form-input">
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Mail Address1</div>
+                <div class="form-input">
+                    <input type="text" name="address1" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Mail Address2</div>
+                <div class="form-input">
+                    <input type="text" name="address2">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">City</div>
+                <div class="form-input">
+                    <input type="text" name="city" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">State</div>
+                <div class="form-input">
+                    <select name="state" required>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Zip</div>
+                <div class="form-input">
+                    <input type="text" name="zip" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Upload Photo</div>
+                <div class="form-input">
+                    <input type="file" name="photo" id="photo">
+                    <span id="fileSelected">No file selected.</span>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">E-Mail</div>
+                <div class="form-input">
+                    <input type="email" name="email" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Mobile</div>
+                <div class="form-input">
+                    <input type="text" name="mobile" placeholder="+91" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Languages known</div>
+                <div class="form-input checkbox-group">
+                    <label><input type="checkbox" name="languages" value="Gujarati" checked> Gujarati</label>
+                    <label><input type="checkbox" name="languages" value="Hindi" checked> Hindi</label>
+                    <label><input type="checkbox" name="languages" value="English" checked> English</label>
+                    <label><input type="checkbox" name="languages" value="Marathi"> Marathi</label>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Additional Information</div>
+                <div class="form-input">
+                    <textarea name="additionalInfo" placeholder="Optional"></textarea>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('photo').addEventListener('change', function() {
+            if (this.files.length > 0) {
+                document.getElementById('fileSelected').textContent = this.files[0].name;
+            } else {
+                document.getElementById('fileSelected').textContent = 'No file selected.';
+            }
+        });
+    </script>
+</body>
+</html>

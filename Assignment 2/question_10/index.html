@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somu Singh - Personal Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #2c3e50;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .title {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .education, .experience {
+            margin-bottom: 15px;
+        }
+        
+        .education h3, .experience h3 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .date {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 0.9em;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://avatars.githubusercontent.com/u/170082343?v=4" alt="Profile Picture" class="profile-img">
+            <h1>Somu Singh</h1>
+            <p class="title">Computer Engineering Student</p>
+        </header>
+        
+        <div class="contact-info">
+            <p>📧 somusingh1104@gmail.com | 📱 (91) 8085857189</p>
+            <p>🏠 Indore, Madhya Pradesh, India</p>
+            <p>💻 <a href="https://github.com/SomuSingh11">GitHub</a> | 
+               🔗 <a href="https://linkedin.com/in/somusingh11">LinkedIn</a></p>
+        </div>
+        
+        <section>
+            <h2>Summary</h2>
+            <p>
+                Dedicated Computer Engineering student with strong academic performance and practical experience in web development.
+                Proficient in various programming languages and frameworks including React.js, Next.js, and the MERN stack.
+                Passionate about building responsive and user-friendly applications with a focus on real-time communication.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Education</h2>
+            <div class="education">
+                <h3>Bachelor of Engineering in Computer Engineering</h3>
+                <p>Institute of Engineering & Technology, DAVV | Indore, MP</p>
+                <p class="date">October 2022 - Present</p>
+                <p>GPA: 8.98</p>
+                <p>Relevant Coursework: Data Structures & Algorithms, Operating System, Database Management, Computer
+                Programming (C++, Java), Object Oriented Programming, Machine Learning, Web Technologies</p>
+            </div>
+            
+            <div class="education">
+                <h3>Higher Secondary Education (Class XII)</h3>
+                <p>Mount Litera Zee School | Indore, MP</p>
+                <p class="date">2020 - 2021</p>
+                <p>CBSE | Percentage: 95%</p>
+            </div>
+            
+            <div class="education">
+                <h3>Secondary Education (Class X)</h3>
+                <p>Mount Litera Zee School | Indore, MP</p>
+                <p class="date">2018 - 2019</p>
+                <p>CBSE | Percentage: 90%</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">Java</span>
+                <span class="skill">SQL</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">C++</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">React.js</span>
+                <span class="skill">Next.js</span>
+                <span class="skill">Express.js</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Bootstrap</span>
+                <span class="skill">TailwindCSS</span>
+                <span class="skill">shadcn</span>
+                <span class="skill">DaisyUI</span>
+                <span class="skill">Git</span>
+                <span class="skill">MongoDB</span>
+                <span class="skill">Postman</span>
+                <span class="skill">Prisma</span>
+                <span class="skill">Clerk</span>
+                <span class="skill">Windows</span>
+                <span class="skill">Linux</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Technical Projects</h2>
+            <div class="experience">
+                <h3>PingPal | MERN, Socket.IO, TailwindCSS, DaisyUI</h3>
+                <p class="date">Personal Project</p>
+                <ul>
+                    <li>Built a real-time communication platform with one-on-one chat features using Socket.IO, offering seamless messaging with online user status indicators.</li>
+                    <li>Integrated authentication via JWT for secure access and utilised Zustand for efficient global state management.</li>
+                    <li>Designed a dynamic and responsive interface with TailwindCSS, DaisyUI, and 32 customizable UI modes, providing users with a highly personalized experience.</li>
+                </ul>
+                <p><a href="https://github.com/SomuSingh11">GitHub</a> | <a href="#">Live</a></p>
+            </div>
+            
+            <div class="experience">
+                <h3>ChatCord | Next.js, NeonDb, Prisma, clerk, Socket.IO, LiveKit</h3>
+                <p class="date">Personal Project</p>
+                <ul>
+                    <li>Built a Discord-like communication platform where users can create and manage servers, supporting real-time text, voice, and video interactions using WebSockets for smooth messaging.</li>
+                    <li>Integrated both one-on-one and group chat features within servers, enabling flexible communication, while implementing a role-based hierarchy for server owners, moderators, and guests to ensure proper access control.</li>
+                    <li>Enhanced collaboration with voice and video channels, plus screen sharing, allowing users to connect and collaborate efficiently within the platform.</li>
+                </ul>
+                <p><a href="https://github.com/SomuSingh11">GitHub</a> | <a href="#">Live</a></p>
+            </div>
+            
+            <div class="experience">
+                <h3>usePopcorn | React.js</h3>
+                <p class="date">Personal Project</p>
+                <p>usePopcorn is a React app that enhances the movie-watching experience by helping users discover, rate, and manage films. Using the OMDB API, it grants access to a large movie database, allowing users to:</p>
+                <ul>
+                    <li>Search for films and view detailed information, including genres, cast, director, and ratings.</li>
+                    <li>Rate movies and add them to a personalized watched list, with the option to remove titles as needed.</li>
+                    <li>Track statistics about their viewing history, providing insights into their movie preferences.</li>
+                </ul>
+                <p><a href="https://github.com/SomuSingh11">GitHub</a> | <a href="#">Live</a></p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Postman API Fundamentals Student Expert (<a href="#">Certificate</a>)</li>
+                <li>Networking Basics Badge (Issued by Cisco)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Languages</h2>
+            <ul>
+                <li>English (Professional)</li>
+                <li>Hindi (Native)</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>&copy; 2023 Somu Singh. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
