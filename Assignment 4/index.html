@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Concepts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Concepts Implementation</h1>
+        <nav>
+            <ul>
+                <li><a href="#calculators">Calculators</a></li>
+                <li><a href="#popups">Pop-up Boxes</a></li>
+                <li><a href="#events">Event Handling</a></li>
+                <li><a href="#forms">Forms & Validation</a></li>
+                <li><a href="#objects">JS Objects & AJAX</a></li>
+                <li><a href="#todo">To-Do List</a></li>
+                <li><a href="#chatbot">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Calculators Section -->
+        <section id="calculators" class="section">
+            <h2>Calculators</h2>
+            
+            <!-- BMI Calculator -->
+            <div class="calculator">
+                <h3>BMI Calculator</h3>
+                <div class="form-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="Enter weight">
+                </div>
+                <div class="form-group">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" placeholder="Enter height">
+                </div>
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <div id="bmi-result" class="result"></div>
+            </div>
+
+            <!-- Temperature Converter -->
+            <div class="calculator">
+                <h3>Temperature Converter</h3>
+                <div class="form-group">
+                    <label for="celsius">Celsius:</label>
+                    <input type="number" id="celsius" placeholder="Enter temperature in Celsius" oninput="convertTemperature('c')">
+                </div>
+                <div class="form-group">
+                    <label for="fahrenheit">Fahrenheit:</label>
+                    <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit" oninput="convertTemperature('f')">
+                </div>
+                <div id="temp-result" class="result"></div>
+            </div>
+
+            <!-- Dynamic Table -->
+            <div class="dynamic-table">
+                <h3>Dynamic User Table</h3>
+                <button onclick="generateUsers()">Generate Users</button>
+                <table id="user-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <!-- Dynamic content will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pop-up Boxes Section -->
+        <section id="popups" class="section">
+            <h2>Pop-up Boxes</h2>
+            
+            <!-- Alert Box -->
+            <div class="popup-demo">
+                <h3>Alert Box</h3>
+                <form id="alert-form">
+                    <div class="form-group">
+                        <label for="alert-name">Name:</label>
+                        <input type="text" id="alert-name" placeholder="Enter your name">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Confirm Box -->
+            <div class="popup-demo">
+                <h3>Confirm Box</h3>
+                <ul id="item-list">
+                    <li>Item 1 <button onclick="confirmDelete(this)">Delete</button></li>
+                    <li>Item 2 <button onclick="confirmDelete(this)">Delete</button></li>
+                    <li>Item 3 <button onclick="confirmDelete(this)">Delete</button></li>
+                </ul>
+            </div>
+
+            <!-- Prompt Box -->
+            <div class="popup-demo">
+                <h3>Prompt Box</h3>
+                <button onclick="promptUser()">Enter Your Favorite Color</button>
+                <p id="prompt-result"></p>
+            </div>
+        </section>
+
+        <!-- Event Handling Section -->
+        <section id="events" class="section">
+            <h2>Event Handling & DOM Manipulation</h2>
+            
+            <!-- Change Text/Style/Image -->
+            <div class="event-demo">
+                <h3>Change Content</h3>
+                <p id="changeable-text">This text will change when you click the button.</p>
+                <button onclick="changeText()">Change Text</button>
+                <button onclick="changeStyle()">Change Style</button>
+                <div class="image-container">
+                    <img id="changeable-image" src="https://via.placeholder.com/200x150?text=Image+1" alt="Changeable Image">
+                </div>
+                <button onclick="changeImage()">Change Image</button>
+            </div>
+
+            <!-- Hover Effects -->
+            <div class="event-demo">
+                <h3>Hover Effects</h3>
+                <div id="hover-box" onmouseover="applyHoverEffect(this)" onmouseout="removeHoverEffect(this)">
+                    Hover over me!
+                </div>
+            </div>
+
+            <!-- Dynamic List -->
+            <div class="event-demo">
+                <h3>Dynamic List</h3>
+                <div class="form-group">
+                    <input type="text" id="new-item" placeholder="Enter a new item">
+                    <button onclick="addItem()">Add Item</button>
+                </div>
+                <ul id="dynamic-list">
+                    <!-- Items will be added dynamically -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Forms & Validation Section -->
+        <section id="forms" class="section">
+            <h2>Forms & Validation</h2>
+            
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="reg-name">Name:</label>
+                    <input type="text" id="reg-name" placeholder="Enter your full name">
+                    <span class="error" id="name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" placeholder="Enter your email">
+                    <span class="error" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-phone">Phone:</label>
+                    <input type="tel" id="reg-phone" placeholder="Enter your phone number">
+                    <span class="error" id="phone-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" placeholder="Enter a strong password">
+                    <span class="error" id="password-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-confirm-password">Confirm Password:</label>
+                    <input type="password" id="reg-confirm-password" placeholder="Confirm your password">
+                    <span class="error" id="confirm-password-error"></span>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- JS Objects & AJAX Section -->
+        <section id="objects" class="section">
+            <h2>JavaScript Objects & AJAX</h2>
+            
+            <!-- Date Object -->
+            <div class="object-demo">
+                <h3>Date Object</h3>
+                <p id="current-date">Current Date & Time: </p>
+                <button onclick="updateDateTime()">Update Date & Time</button>
+            </div>
+
+            <!-- Math Object -->
+            <div class="object-demo">
+                <h3>Math Object</h3>
+                <p>Generate a random number between:</p>
+                <div class="form-group">
+                    <label for="min-number">Min:</label>
+                    <input type="number" id="min-number" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="max-number">Max:</label>
+                    <input type="number" id="max-number" value="100">
+                </div>
+                <button onclick="generateRandomNumber()">Generate</button>
+                <p id="random-number-result"></p>
+            </div>
+
+            <!-- AJAX Demo -->
+            <div class="object-demo">
+                <h3>AJAX - Weather Data</h3>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" placeholder="Enter city name">
+                </div>
+                <button onclick="fetchWeatherData()">Get Weather</button>
+                <div id="weather-result" class="result"></div>
+            </div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo" class="section">
+            <h2>To-Do List App</h2>
+            
+            <div class="todo-container">
+                <div class="form-group">
+                    <input type="text" id="todo-input" placeholder="Add a new task">
+                    <button onclick="addTodo()">Add Task</button>
+                </div>
+                <ul id="todo-list">
+                    <!-- Tasks will be added dynamically -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot" class="section">
+            <h2>Simple Chatbot</h2>
+            
+            <div class="chatbot-container">
+                <div id="chat-messages">
+                    <div class="bot-message">Hi there! I'm a simple chatbot. How can I help you today?</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="user-message" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 JavaScript Concepts Implementation</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
